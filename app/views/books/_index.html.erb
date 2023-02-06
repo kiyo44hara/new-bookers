@@ -19,6 +19,7 @@
         <td class="favorite-btn"><%= render "favorites/favorite-btn", book: book %></td>
         <td class="comments-count">コメント数: <%= book.book_comments.count %></td>
         <td class="view-count">閲覧数: <%= book.view_counts.count %></td>
+        <td><%= render "books/static_rate", book: book %></td>
     <% end %>
       </tr>
   </tbody>
