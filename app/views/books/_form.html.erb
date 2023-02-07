@@ -9,9 +9,9 @@
     <%= f.text_area :body, class: 'form-control book_body' %>
   </div>
   
-  <div class="field">
-    <%= f.label"タグ (,で区切ると複数タグ登録できます)" %>
-    <%= f.text_field :name,value: @tag_list,class:"form-control"%>
+  <div class="form-group">
+    <%= f.label "Tag" %>
+    <%= f.text_field :tag_name, class: 'form-control book_tag_name' %>
   </div>
   
   

@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     unless ViewCount.find_by(user_id: current_user.id, book_id: @book_detail.id)
       current_user.view_counts.create(book_id: @book_detail.id)
     end
+    @tag_list = Tag.all
   end
 
   def index
