@@ -8,9 +8,13 @@
     <%= f.text_area :body, class: 'form-control book_body' %>
   </div>
   
+  <div class="form-group">
+    <%= f.label :Tag %>
+    <%= f. text_field:category, class: 'form-control book_category' %>
+  </div>
+  
   <% if book.id === nil %>
     <div class="form-group" id="star">
-      <%= f.label :rate %>
       <%= f.hidden_field :rate, id: :review_star, class:'form-control' %>
     </div>
 

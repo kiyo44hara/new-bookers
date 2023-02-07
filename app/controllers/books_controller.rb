@@ -1,5 +1,10 @@
 class BooksController < ApplicationController
   before_action :is_matching_login_user, only: [:edit, :update, :destroy]
+  
+  def search_book
+    @book = Book.new
+    @books = Book.search(params[:keyword])
+  end
 
   def show
     @book_new = Book.new
@@ -54,7 +59,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :body, :rate)
+    params.require(:book).permit(:title, :body, :rate, :category)
   end
 
   def is_matching_login_user

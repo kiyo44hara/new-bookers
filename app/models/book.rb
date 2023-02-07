@@ -38,5 +38,8 @@ class Book < ApplicationRecord
       Book.where('title LIKE ?', '%'+content+'%')
     end
   end
-
+  
+  def self.search(search_word)
+    Book.where(['category LIKE ?', "#{search_word}"])
+  end
 end
