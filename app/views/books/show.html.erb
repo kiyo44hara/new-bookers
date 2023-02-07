@@ -27,6 +27,10 @@
             </td>
             <td class="view_counts">閲覧数: <%= @book.view_counts.count %></td>
             <td class="favorite-btn"><%= render "favorites/favorite-btn", book: @book %></td>
+            <td><% @book_tags.each do |tag| %>
+                  <%= tag.name %>
+                <% end %>
+            </td>
         </tr>
       </table>
           
