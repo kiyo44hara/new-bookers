@@ -4,7 +4,7 @@ class CreateChats < ActiveRecord::Migration[6.1]
       t.integer :user_id
       t.integer :room_id
       t.string :message
-      
+
       t.timestamps
     end
   end
