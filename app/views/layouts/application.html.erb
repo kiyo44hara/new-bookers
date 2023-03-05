@@ -14,13 +14,8 @@
   <body>
     <%= render 'layouts/header' %>
       <main>
-        <p id="notice"><%= notice %></p>
-        <div class="d-flex justify-content-center mb-2">
-        <% if user_signed_in? %>
-          <%= render 'layouts/seach' %>
-          <%= render "searches/tag_form" %>
-        </div>
-        <% end %>
+        <!--<p id="notice">< notice %></p>-->
+        <!--背景画像適用の為に非表示にしています。表示させたい場合は、noticeに%=を追加してください-->
       </main>
         <%= yield %>
     <%= render 'layouts/footer' %>
